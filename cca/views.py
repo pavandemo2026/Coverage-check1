@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .forms import CoverageForm
 import google.generativeai as genai
-
 # Create your views here.
 
 # Api_key = 'AIzaSyBWIoT1qb-4mcM2ROhgwfhAU3vqGOm0Bow' 
@@ -9,7 +8,7 @@ import google.generativeai as genai
 
 def get_health_cover_recommendation(name, age, city, income, dependents):
     prompt = (
-        f"Suggest an appropriate health cover amount in INR for the following person:\n"
+        f"Suggest a  appropriate health cover amount in INR for the following person:\n"
         f"Name: {name}\nAge: {age}\nCity: {city}\nAnnual Income: ₹{income}\n"
         f"Dependents: {dependents}\nReturn only the numeric amount, no explanation."
     )
